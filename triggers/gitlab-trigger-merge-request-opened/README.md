@@ -1,6 +1,6 @@
-# gitlab-trigger-merge-request-merged
+# gitlab-trigger-merge-request-opened
 
-This trigger fires when a merge request is merged.
+This trigger fires when a merge request is opened.
 
 ## Event data
 
@@ -23,10 +23,10 @@ parameters:
     default: "kenazk/testing"
     
 triggers:
-- name: gitlab-merge-request-merged
+- name: gitlab-merge-request-opened
   source:
     type: webhook
-    image: relaysh/gitlab-trigger-merge-request-merged
+    image: relaysh/gitlab-trigger-merge-request-opened
   binding:
     parameters:
       repository: !Data repository 
