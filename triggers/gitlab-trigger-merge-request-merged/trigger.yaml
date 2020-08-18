@@ -2,7 +2,7 @@ apiVersion: integration/v1
 kind: Trigger
 name: gitlab-trigger-pull-request-merged
 version: 1
-summary: gitlab pull request merged
+summary: Gitlab pull request merged
 
 description: |
   This trigger fires when a Gitlab merge request is merged.
@@ -17,3 +17,6 @@ schemas:
 build:
   apiVersion: build/v1
   kind: Docker
+
+publish:
+  repository: relaysh/gitlab-trigger-pull-request-merged

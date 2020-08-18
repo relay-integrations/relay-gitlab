@@ -5,7 +5,7 @@ version: 1
 summary: Gitlab merge request opened
 
 description: |
-  This trigger fires when a Gitlab merge request is opened. 
+  This trigger fires when a Gitlab merge request is opened.
 
 responders:
 - webhook
@@ -17,3 +17,6 @@ schemas:
 build:
   apiVersion: build/v1
   kind: Docker
+
+publish:
+  repository: relaysh/gitlab-trigger-pull-request-opened
