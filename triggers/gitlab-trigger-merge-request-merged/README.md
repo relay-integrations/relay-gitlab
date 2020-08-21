@@ -6,8 +6,8 @@ This trigger fires when a merge request is merged.
 
 | Key              | Description                                                           |
 |------------------|-----------------------------------------------------------------------|
-| url              | The pull request URL                                                  |
-| branch           | The branch that the changes were pulled into (target for the merge request) |
+| url              | The merge request URL                                                  |
+| branch           | The branch that the changes were merged into (target for the merge request) |
 | repository       | The name of the repository                                            |
 | repositoryURL    | The URL to the repository on GitLab                                   |
 | repositoryGitURL | The URL to the repository as a git:// scheme                          |
@@ -17,11 +17,11 @@ This trigger fires when a merge request is merged.
 
 ```
 parameters:
-  branch: 
+  branch:
     default: master
   repository:
     default: "kenazk/testing"
-    
+
 triggers:
 - name: gitlab-merge-request-merged
   source:
@@ -29,6 +29,6 @@ triggers:
     image: relaysh/gitlab-trigger-merge-request-merged
   binding:
     parameters:
-      repository: !Data repository 
+      repository: !Data repository
       branch: !Data branch
 ```

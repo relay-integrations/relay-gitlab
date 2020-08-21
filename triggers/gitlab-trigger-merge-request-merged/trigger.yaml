@@ -1,8 +1,8 @@
 apiVersion: integration/v1
 kind: Trigger
-name: gitlab-trigger-pull-request-merged
+name: gitlab-trigger-merge-request-merged
 version: 1
-summary: Gitlab pull request merged
+summary: Gitlab merge request merged
 
 description: |
   This trigger fires when a Gitlab merge request is merged.
