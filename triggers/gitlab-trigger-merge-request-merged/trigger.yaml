@@ -20,3 +20,17 @@ build:
 
 publish:
   repository: relaysh/gitlab-trigger-pull-request-merged
+
+examples:
+- summary: When a merge request is merged
+  content:
+    apiVersion: 1
+    kind: Trigger
+    name: gitlab-merge-request-merged
+    source:
+      type: webhook
+      image: relaysh/gitlab-trigger-merge-request-merged
+    binding:
+      parameters:
+        repository: !Data repository
+        branch: !Data branch
