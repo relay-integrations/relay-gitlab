@@ -24,7 +24,7 @@ publish:
 examples:
 - summary: When a merge request is merged
   content:
-    apiVersion: 1
+    apiVersion: v1
     kind: Trigger
     name: gitlab-merge-request-merged
     source:
