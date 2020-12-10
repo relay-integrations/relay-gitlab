@@ -2,10 +2,10 @@ apiVersion: integration/v1
 kind: Trigger
 name: gitlab-trigger-merge-request-opened
 version: 1
-summary: Gitlab merge request opened
+summary: GitLab merge request opened
 
 description: |
-  This trigger fires when a Gitlab merge request is opened.
+  This trigger fires when a GitLab merge request is opened.
 
 responders:
 - webhook
