@@ -20,9 +20,11 @@ async def handler():
     if gitlab_event != 'Merge Request Hook':
         return {'message': 'only merge request events are supported'}, 400, {}
 
-    logging.info("receiving event from GitLab: {}".format(gitlab_event))
+    logging.info("Received event from GitLab: {}".format(gitlab_event))
 
     event_payload = await request.get_json()
+    logging.info("Received the following webhook payload: \n%s", json.dumps(event_payload, indent=4))
+    
     if event_payload is None:
         return {'message': 'not a valid GitLab event'}, 400, {}
 
