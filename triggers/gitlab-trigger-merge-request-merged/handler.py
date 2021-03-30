@@ -1,4 +1,4 @@
-from nebula_sdk import Interface, WebhookServer, Dynamic as D
+from relay_sdk import Interface, WebhookServer, Dynamic as D
 from quart import Quart, request, jsonify, make_response
 
 import logging
